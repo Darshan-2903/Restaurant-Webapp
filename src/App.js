@@ -31,10 +31,10 @@ const App = () => {
      <Header/>
 
      <main className='mt-14 md:mt-20 px-4 md:px-16 py-4 w-full'>
-        <BrowserRouter basename={process.env.PUBLIC_URL}>
+        <Routes basename={process.env.PUBLIC_URL}>
         <Route path="/*" element={<MainContainer/>}/>
         <Route path="/createItem" element={<CreateContainer/>}/>
-        </BrowserRouter>
+        </Routes>
      </main>
     </div>
   </AnimatePresence>
