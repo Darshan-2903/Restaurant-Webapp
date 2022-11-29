@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { AnimatePresence } from 'framer-motion';
-import { Route, Routes} from "react-router-dom";
+import { BrowserRouter, Route, Routes} from "react-router-dom";
 import { CreateContainer, Header, MainContainer } from './components';
 import { useStateValue } from "./context/StateProvider";
 import { getAllFoodItems } from "./utils/firebaseFunctions";
@@ -31,10 +31,10 @@ const App = () => {
      <Header/>
 
      <main className='mt-14 md:mt-20 px-4 md:px-16 py-4 w-full'>
-        <Routes>
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Route path="/*" element={<MainContainer/>}/>
         <Route path="/createItem" element={<CreateContainer/>}/>
-        </Routes>
+        </BrowserRouter>
      </main>
     </div>
   </AnimatePresence>
