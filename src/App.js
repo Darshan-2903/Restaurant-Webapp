@@ -1,7 +1,11 @@
 import { AnimatePresence } from 'framer-motion';
 import React from 'react'
 import { Route, Routes} from "react-router-dom";
-import { CreateContainer, Header, MainContainer } from './components'
+import { CreateContainer, Header, MainContainer } from './components';
+import { useStateValue } from "./context/StateProvider";
+import { getAllFoodItems } from "./utils/firebaseFunctions";
+import { actionType } from "./context/reducer";
+
 
 const App = () => {
   const [{ foodItems }, dispatch] = useStateValue();
@@ -18,7 +22,7 @@ const App = () => {
   useEffect(() => {
     fetchData();
   }, []);
-  
+
   return (
     
   <AnimatePresence exitBeforeEnter>
