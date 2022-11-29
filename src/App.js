@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { AnimatePresence } from 'framer-motion';
-import React from 'react'
 import { Route, Routes} from "react-router-dom";
 import { CreateContainer, Header, MainContainer } from './components';
 import { useStateValue } from "./context/StateProvider";
