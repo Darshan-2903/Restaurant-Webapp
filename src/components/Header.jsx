@@ -71,8 +71,8 @@ const Header = () => {
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: 200 }}
            className="flex items-center gap-8">
-            <li className="text-base text-textColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer">
-              Home
+           <li className="text-base text-textColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer">  
+              Home            
             </li>
             <li className="text-base text-textColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer">
               Menu
